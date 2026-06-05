@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
+}
+
+.dashboard{
+    width:400px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.profile{
+    text-align:center;
+}
+
+.avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.status{
+    color:green;
+    margin-top:10px;
+}
+
+.balance-card{
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:white;
+    border-radius:15px;
+    padding:20px;
+    margin-top:20px;
+}
+
+.balance{
+    font-size:42px;
+    font-weight:bold;
+}
+
+.info{
+    margin-top:20px;
+}
+
+.info p{
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.note{
+    text-align:center;
+    color:#777;
+    margin-top:15px;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <div class="profile">
+        <div class="avatar">P</div>
+
+        <h2>Pavel Chira</h2>
+        <p>@Pavelchira001</p>
+
+        <div class="status">● Active</div>
+    </div>
+
+    <div class="balance-card">
+        <p>Available Balance</p>
+        <div class="balance">$30,000.00</div>
+        <small>Updated June 2026</small>
+    </div>
+
+    <div class="info">
+        <p><b>Email:</b> pavelchira0@gmail.com</p>
+        <p><b>Phone:</b> +33 7 58 33 42 58</p>
+        <p><b>Location:</b> Paris, France</p>
+    </div>
+
+    <button onclick="withdraw()">Withdraw</button>
+
+    <div class="note">
+        REAL FINANCIAL ACCOUNT
+    </div>
+
+</div>
+
+<script>
+function withdraw(){
+    let pin = prompt("Enter PIN");
+
+    if(pin === "1234"){
+        alert(" withdrawal approved.");
+    }else{
+        alert("Invalid PIN.");
+    }
+}
+</script>
+
+</body>
+</html>
